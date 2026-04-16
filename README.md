@@ -154,11 +154,12 @@ Eclipse32/
 export PATH=$PATH:/usr/local/cross/bin
 
 # Required tools
-i686-elf-gcc    # C cross compiler
-i686-elf-ld     # Cross linker
+zig  # C cross compiler
+ld.lld    # Cross linker
 nasm            # Assembler
 python3         # Disk image tool
 qemu-system-i386 # Emulator (optional)
+llvm-objcopy # Objcopy
 ```
 
 ## Building
@@ -172,13 +173,7 @@ make clean      # Remove build artifacts
 
 ---
 
-## Splash Screen
 
-Place a **320×200 BMP** (24bpp) at `assets/splash.bmp` before building.
-The Stage 1 bootloader displays it in VGA mode 13h for 3 seconds.
-Adjust `SPLASH_DELAY` in `boot/stage1/boot.asm` (in seconds).
-
----
 
 ## Shell Features
 
