@@ -15,7 +15,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt update
-        sudo apt install -y nasm build-essential python3 llvm make git
+        sudo apt install -y nasm build-essential python3 llvm make git lld
 
     - name: Setup Zig
       uses: mlugg/setup-zig@v1
