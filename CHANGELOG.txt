@@ -1,0 +1,4 @@
+v1.0.0
+Eclipse32 _ shell, fs
+v1.1.0 - complete rewrite of the os with imporoved kernel and shell
+v1.1.0 - added executable format, eclipse32 binary format execution, login, username = root, password = root, added boot splash, added c runtime, added syscalls, added libc
