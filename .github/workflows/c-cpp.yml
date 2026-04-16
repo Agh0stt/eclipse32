@@ -15,14 +15,12 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt update
-        sudo apt install -y nasm build-essential python3 llvm make git wget
+        sudo apt install -y nasm build-essential python3 llvm make git
 
-    - name: Install Zig
-      run: |
-        wget https://ziglang.org/builds/zig-linux-x86_64-0.12.0.tar.xz
-        tar -xf zig-linux-x86_64-0.12.0.tar.xz
-        sudo mv zig-linux-x86_64-0.12.0 /opt/zig
-        echo "/opt/zig" >> $GITHUB_PATH
+    - name: Setup Zig
+      uses: mlugg/setup-zig@v1
+      with:
+        version: 0.12.0
 
     - name: Build OS image
       run: make
